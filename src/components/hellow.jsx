@@ -1,11 +1,12 @@
-function Hellow() {
-    return (
-      <div>
-        <h1>return hellow from modified</h1>
-        <h2>kyomah</h2>
-      </div>
-    );
-  }
-  
-  export default Hellow;
-  
+function Hellow({person}) {
+  return (
+    <div>
+      <h1>
+        {person.name} {person.message} {person.info} {person.seatNumber}
+      </h1>
+    </div>
+  );
+}
+
+export default Hellow;
+ 
