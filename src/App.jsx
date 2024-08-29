@@ -1,5 +1,6 @@
 import Hellow from "./components/hellow";
 import Fruits from "./components/Fruits";
+import ConditionComponent from "./components/ConditionalComponent";
 
 function App() {
   //using object instead of individual
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Fruits />
+      {/* <ConditionComponent /> */}
     </div>
   );
 }
