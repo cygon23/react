@@ -5,6 +5,7 @@ export default function Form() {
   const [name, setName] = useState({ firstName: "", secondName: "" });
   function handleSubmition(e) {
     e.preventDefault();
+    console.log(name);
   }
 
   //use of spread operator ...name used to take the any available value in useStae name
