@@ -10,25 +10,24 @@ export default function TodoList({ item, todos, setTodos }) {
   function handleClick(name) {
     const newArray = todos.map((todo) =>
       todo.name === name ? { ...todo, done: !todo.done } : todo
-    );
-    setTodos(newArray);
+    )
+    setTodos(newArray)
   }
 
-  // Safely handle conditional class names
-  const deleteCheck = item?.done ? styles.completed : "";
+  // Safely handle conditional class name s
+  const className = item.done ? styles.completed : "";
 
-  return ( 
+  return (
     <div className={styles.item}>
       <div className={styles.itemName}>
-        <span 
-          className={deleteCheck}  
-          onClick={() => handleClick(item?.name)}>
-          {item?.name}
+        <span className={className} onClick={() => handleClick(item.name)}>
+          {item.name}
         </span>
         <span>
           <button
-            onClick={() => handleDelete(item)}
-            className={styles.deleteBtn}>
+            onClick={() => handleDelete(item)} 
+            className={styles.deleteBtn}
+          >
             x
           </button>
         </span>
