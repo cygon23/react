@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./fooddetails.module.css";
+import IngrientList from "./IngrientList";
 export default function FoodDetails({ foodId }) {
   const [food, setFood] = useState({});
   //used to prevent app from crash and to wait to receive data from api
@@ -38,16 +39,7 @@ export default function FoodDetails({ foodId }) {
           $<span>{food.pricePerServing}</span>
         </div>
 
-        {food.extendedIngredients.map((item) => (
-          <div>
-            <img
-              src={`https://spoonacular.com/cdn/ingredients_100x100/${item.image}`}
-              alt=""
-            />
-            <h2>{item.name}</h2>
-            <h3>{item.amount} {item.unit}</h3>
-          </div>
-        ))}
+        <IngrientList food={food} isLoading={isLoading} />
 
         <h2>Instructions</h2>
         <div className={styles.resepeInstructions}>
