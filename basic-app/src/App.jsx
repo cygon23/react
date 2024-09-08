@@ -4,6 +4,7 @@ import ConditionComponent from "./components/ConditionalComponent";
 import Message from "./components/Message";
 import Counter from "./components/Counter";
 import Form from "./components/Form";
+import ReducerHook from "./components/ReducerHook";
 
 function App() {
   //using object instead of individual
@@ -15,7 +16,8 @@ function App() {
   // };
   return (
     <div className="App">
-      <Form/>
+      <ReducerHook />
+      {/* <Form/> */}
       {/* <Counter/> */}
       {/* <Message /> */}
       {/* <Fruits /> */}
